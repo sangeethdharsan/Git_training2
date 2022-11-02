@@ -2,7 +2,7 @@ pipeline{
  agent{lable 'Linux'}
  
  stages{
-   stage(''Connected){
+   stage('Connected'){
    steps{
    sh '''
    ansible --version

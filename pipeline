@@ -1,0 +1,15 @@
+pipeline{
+ agent{lable 'Linux'}
+ 
+ stages{
+   stage(''Connected){
+   steps{
+   sh '''
+   ansible --version
+   ansible-playbook  --version
+   ansible-galaxy --version
+   '''
+   }
+   }
+ }
+}

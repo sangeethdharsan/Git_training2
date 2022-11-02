@@ -1,0 +1,7 @@
+---
+ - name: localhostdemo
+   hosts: localhost
+   tasks:
+    - name: Printing Hostname
+      ansible.builtin.debug:
+           msg: "Connected"

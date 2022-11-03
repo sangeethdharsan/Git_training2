@@ -1,0 +1,25 @@
+---
+- hosts: all
+  tasks:
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+    - name: nginx start
+      service:
+          name: nginx
+          state: started
+    - name: ensure mysql is at the latest version
+      apt: name=mysql-server state=latest
+    - name: Start the MySQL service
+      service: name=mysql state=started
+      notify: restart mysql
+    - name: Copying
+      copy: src=/apps/file.txt dest=app/app1
+    - name: "Install ansible python3 mysql dependency"
+      apt:
+       name: python3-mysqldb
+       state: latest
+    - name: Create database 
+      mysql_user:
+         name: sangeeth
+         password: admin
+         priv: '*.*:ALL'

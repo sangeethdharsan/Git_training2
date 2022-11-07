@@ -1,4 +1,4 @@
 [ansible_client]
-172.17.0.3 ansible_ssh_root=root ansible_ssh_pass=admin
-172.17.0.4 ansible_ssh_root=root ansible_ssh_pass=admin123
+172.17.0.2 ansible_ssh_root=root ansible_ssh_pass=admin
+172.17.0.3 ansible_ssh_root=root ansible_ssh_pass=admin123
 
